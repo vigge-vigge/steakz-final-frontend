@@ -1,0 +1,484 @@
+/* Admin Card Component Styles */
+
+.admin-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.admin-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Color variants */
+.admin-card.blue {
+  border-left-color: #4299e1;
+  background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
+}
+
+.admin-card.green {
+  border-left-color: #48bb78;
+  background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+}
+
+.admin-card.purple {
+  border-left-color: #9f7aea;
+  background: linear-gradient(135deg, #faf5ff 0%, #e9d8fd 100%);
+}
+
+.admin-card.orange {
+  border-left-color: #ed8936;
+  background: linear-gradient(135deg, #fffaf0 0%, #fbd38d 100%);
+}
+
+.admin-card.teal {
+  border-left-color: #38b2ac;
+  background: linear-gradient(135deg, #e6fffa 0%, #81e6d9 100%);
+}
+
+.admin-card.red {
+  border-left-color: #f56565;
+  background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+}
+
+.admin-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.3);
+  padding-bottom: 1rem;
+}
+
+.admin-card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.admin-card-title h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.admin-card-icon {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.admin-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.admin-card-content {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Form styles within cards */
+.admin-card .form-group {
+  margin-bottom: 1rem;
+}
+
+.admin-card .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.admin-card .form-group input,
+.admin-card .form-group select,
+.admin-card .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.admin-card .form-group input:focus,
+.admin-card .form-group select:focus,
+.admin-card .form-group textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Button styles within cards */
+.admin-card .btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.admin-card .btn-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.admin-card .btn-primary:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.admin-card .btn-secondary {
+  background: #6b7280;
+  color: white;
+}
+
+.admin-card .btn-secondary:hover {
+  background: #4b5563;
+}
+
+.admin-card .btn-success {
+  background: #10b981;
+  color: white;
+}
+
+.admin-card .btn-success:hover {
+  background: #059669;
+}
+
+.admin-card .btn-danger {
+  background: #ef4444;
+  color: white;
+}
+
+.admin-card .btn-danger:hover {
+  background: #dc2626;
+}
+
+.admin-card .btn-outline {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.admin-card .btn-outline:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+/* Table styles within cards */
+.admin-card .data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.admin-card .data-table th,
+.admin-card .data-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-card .data-table th {
+  background: rgba(249, 250, 251, 0.8);
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-card .data-table tbody tr:hover {
+  background: rgba(249, 250, 251, 0.5);
+}
+
+/* Loading and error states */
+.admin-card .loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.admin-card .error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.admin-card .success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Grid layout for cards */
+.admin-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.admin-cards-grid.single-column {
+  grid-template-columns: 1fr;
+}
+
+.admin-cards-grid.two-column {
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+/* Restaurant-specific styles */
+.restaurant-card {
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.restaurant-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.info-value {
+  color: #2d3748;
+  font-weight: 500;
+  text-align: right;
+  max-width: 60%;
+  word-wrap: break-word;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-active {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .admin-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .admin-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .admin-card-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .admin-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .admin-card .data-table {
+    font-size: 0.8rem;
+  }
+  
+  .admin-card .data-table th,
+  .admin-card .data-table td {
+    padding: 0.5rem;
+  }
+  
+  .restaurant-info {
+    gap: 0.5rem;
+  }
+  
+  .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .info-value {
+    text-align: left;
+    max-width: 100%;
+  }
+  
+  .status-badge {
+    align-self: flex-start;
+  }
+}
+
+/* Dark mode styles for admin components */
+body.dark-mode .admin-card {
+  background: #27272a;
+  color: #f3f4f6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .admin-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .admin-card.blue {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+}
+
+body.dark-mode .admin-card.green {
+  background: linear-gradient(135deg, #14532d 0%, #22c55e 100%);
+}
+
+body.dark-mode .admin-card.purple {
+  background: linear-gradient(135deg, #581c87 0%, #a855f7 100%);
+}
+
+body.dark-mode .admin-card.orange {
+  background: linear-gradient(135deg, #9a3412 0%, #f97316 100%);
+}
+
+body.dark-mode .admin-card.teal {
+  background: linear-gradient(135deg, #134e4a 0%, #14b8a6 100%);
+}
+
+body.dark-mode .admin-card.red {
+  background: linear-gradient(135deg, #991b1b 0%, #ef4444 100%);
+}
+
+body.dark-mode .admin-card-title {
+  color: #f3f4f6;
+}
+
+body.dark-mode .admin-container {
+  background: #18181b;
+  color: #f3f4f6;
+}
+
+body.dark-mode .stat-number {
+  color: #f3f4f6;
+}
+
+body.dark-mode .stat-label {
+  color: #d1d5db;
+}
+
+body.dark-mode .data-table {
+  background: #27272a;
+  color: #f3f4f6;
+}
+
+body.dark-mode .data-table th {
+  background: #374151;
+  color: #f3f4f6;
+}
+
+body.dark-mode .data-table td {
+  border-color: #374151;
+  color: #f3f4f6;
+}
+
+body.dark-mode .admin-form {
+  background: #27272a;
+  color: #f3f4f6;
+}
+
+body.dark-mode .admin-form input,
+body.dark-mode .admin-form select,
+body.dark-mode .admin-form textarea {
+  background: #374151;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+body.dark-mode .admin-form input:focus,
+body.dark-mode .admin-form select:focus,
+body.dark-mode .admin-form textarea:focus {
+  border-color: #6b7280;
+  box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.2);
+}
+
+body.dark-mode .info-label {
+  color: #d1d5db;
+}
+
+body.dark-mode .info-value {
+  color: #f3f4f6;
+}
+
+body.dark-mode .status-active {
+  background-color: #064e3b;
+  color: #6ee7b7;
+  border-color: #047857;
+}
+
+body.dark-mode .status-inactive {
+  background-color: #7f1d1d;
+  color: #fca5a5;
+  border-color: #dc2626;
+}

@@ -1,0 +1,143 @@
+.post-list {
+  display: grid;
+  gap: 20px;
+}
+
+.post-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h2 a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.post-card h2 a:hover {
+  text-decoration: underline;
+}
+
+.first-comment {
+  color: #666;
+  font-style: italic;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.menu-tile {
+  background: rgba(128, 0, 128, 0.7); /* purple with 70% opacity */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 32px 16px 24px 16px;
+  min-height: 260px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.menu-tile h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.menu-tile p {
+  margin: 0;
+  color: #f3e6ff;
+  font-size: 1rem;
+}
+
+.menu-tile img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.menu-tile .menu-price {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffe066;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 4px 16px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+}
+
+.menu-tile:hover {
+  box-shadow: 0 4px 16px rgba(128, 0, 128, 0.18);
+}
+
+.hero {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5em;
+}
+
+.hero-content .btn {
+  font-size: 1.1rem;
+  padding: 0.8em 2.5em;
+  border-radius: 30px;
+  background: #7a1c1c;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  transition: background 0.2s;
+}
+
+.hero-content .btn:hover {
+  background: #b32d2d;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  padding: 2em;
+  margin-bottom: 2em;
+}

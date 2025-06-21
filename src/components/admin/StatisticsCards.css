@@ -1,0 +1,264 @@
+/* Statistics Cards Component Styles */
+
+.statistics-cards {
+  padding: 1.5rem;
+}
+
+.cards-header {
+  margin-bottom: 1.5rem;
+}
+
+.cards-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header-icon {
+  font-size: 1.8rem;
+}
+
+.stats-summary {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Stat Card Styles */
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Color variants */
+.stat-card.green {
+  border-left-color: #48bb78;
+  background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+}
+
+.stat-card.blue {
+  border-left-color: #4299e1;
+  background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
+}
+
+.stat-card.purple {
+  border-left-color: #9f7aea;
+  background: linear-gradient(135deg, #faf5ff 0%, #e9d8fd 100%);
+}
+
+.stat-card.red {
+  border-left-color: #f56565;
+  background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+}
+
+.stat-card.orange {
+  border-left-color: #ed8936;
+  background: linear-gradient(135deg, #fffaf0 0%, #fbd38d 100%);
+}
+
+.stat-card.teal {
+  border-left-color: #38b2ac;
+  background: linear-gradient(135deg, #e6fffa 0%, #81e6d9 100%);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  opacity: 0.8;
+}
+
+.trend-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.trend-indicator.up {
+  color: #38a169;
+}
+
+.trend-indicator.down {
+  color: #e53e3e;
+}
+
+.trend-indicator.neutral {
+  color: #718096;
+}
+
+.card-content {
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.card-subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-sparkline {
+  display: flex;
+  gap: 2px;
+  align-items: end;
+  height: 20px;
+}
+
+.sparkline-bar {
+  width: 6px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.sparkline-bar:nth-child(1) { height: 40%; }
+.sparkline-bar:nth-child(2) { height: 60%; }
+.sparkline-bar:nth-child(3) { height: 80%; }
+.sparkline-bar:nth-child(4) { height: 50%; }
+.sparkline-bar:nth-child(5) { height: 70%; }
+
+.sparkline-bar.active {
+  background: currentColor;
+  opacity: 0.7;
+}
+
+/* Role Breakdown */
+.role-breakdown {
+  background: rgba(247, 250, 252, 0.8);
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.role-breakdown h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.role-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.role-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.role-name {
+  font-size: 0.85rem;
+  color: #4a5568;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.role-count {
+  font-weight: 700;
+  background: #667eea;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Loading State */
+.loading-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #64748b;
+  font-weight: 500;
+  font-size: 1.1rem;
+  background: rgba(247, 250, 252, 0.8);
+  border-radius: 8px;
+  border: 2px dashed #cbd5e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .statistics-cards {
+    padding: 1rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .card-value {
+    font-size: 1.5rem;
+  }
+  
+  .card-icon {
+    font-size: 2rem;
+  }
+  
+  .role-stats {
+    grid-template-columns: 1fr;
+  }
+}
